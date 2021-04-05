@@ -5,6 +5,8 @@ public class HourlyEmployee extends Employee {
     public HourlyEmployee(String first, String last, String ssn,
                           double hoursWorked, double hourlyWages ) {
         super(first,last, ssn);
+        setHours(hoursWorked);
+        setWages(hourlyWages);
 
     }
     public void setWages( double hourlyWages ) {
