@@ -12,14 +12,14 @@ public class PayrollSystem {
        "Bob", "Lewis", "444-44-4444", 5000, .04, 300 );
         System.out.println( "Employees processed individually:\n" );
         System.out.printf( "%s\n%s: $%,.2f\n\n",
-                 salariedEmployee, "earned", salariedEmployee.earnings() );
+                 salariedEmployee, "earned", salariedEmployee.getPaymentAmount() );
         System.out.printf( "%s\n%s: $%,.2f\n\n",
-                 hourlyEmployee, "earned", hourlyEmployee.earnings() );
+                 hourlyEmployee, "earned", hourlyEmployee.getPaymentAmount() );
         System.out.printf( "%s\n%s: $%,.2f\n\n",
-                commissionEmployee, "earned", commissionEmployee.earnings() );
+                commissionEmployee, "earned", commissionEmployee.getPaymentAmount() );
         System.out.printf( "%s\n%s: $%,.2f\n\n",
                 basePlusCommissionEmployee,
-                "earned", basePlusCommissionEmployee.earnings() );
+                "earned", basePlusCommissionEmployee.getPaymentAmount() );
 
         Employee[] employees = new Employee[ 4 ];
 
@@ -42,7 +42,7 @@ public class PayrollSystem {
                         employee.getBaseSalary() );
             }
             System.out.printf(
-                    "earned $%,.2f\n\n", currentEmployee.earnings() );
+                    "earned $%,.2f\n\n", currentEmployee.getPaymentAmount() );
         }
         for ( int j = 0; j < employees.length; j++ )
             System.out.printf( "Employee %d is a %s\n", j ,
